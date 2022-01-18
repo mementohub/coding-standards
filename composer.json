@@ -1,0 +1,26 @@
+{
+    "name": "mementohub/coding-standards",
+    "description": "Coding Standards used within the Memento Hub team.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MementoHub\\CodingStandards\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bogdan Cismariu",
+            "email": "bogdan.cismariu@gmail.com"
+        }
+    ],
+    "require": {
+        "friendsofphp/php-cs-fixer": "^3.5"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "echo \"Test\"",
+            "MementoHub\\CodingStandards\\ComposerHooks::postUpdateCmd"
+        ]
+    }
+}
