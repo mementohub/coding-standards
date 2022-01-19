@@ -7,7 +7,6 @@
  *
  * @see https://mlocati.github.io/php-cs-fixer-configurator
  */
-
 return [
     '@PSR12' => true,
     'align_multiline_comment' => true,
@@ -207,7 +206,9 @@ return [
     'phpdoc_trim' => true,
     'phpdoc_trim_consecutive_blank_line_separation' => true,
     'phpdoc_types' => true,
-    'phpdoc_types_order' => true,
+    'phpdoc_types_order' => [
+        'null_adjustment' => 'always_last',
+    ],
     'phpdoc_var_annotation_correct_order' => true,
     'phpdoc_var_without_name' => true,
     'pow_to_exponentiation' => false,       // risky
