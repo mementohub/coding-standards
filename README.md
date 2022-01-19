@@ -26,14 +26,16 @@ git commit -a -m "Fixed code styling"
 
 ## VS Code configuration
 
-Install the `junstyle.php-cs-fixer` extension.
+Install the `calebporzio.simple-php-cs-fixer` extension.
 
 Add the following entries to your settings file:
 
 ```json
 {
-    "php-cs-fixer.executablePath": "${workspaceFolder}/vendor/bin/php-cs-fixer",
-    "php-cs-fixer.onsave": true,
+    "simple-php-cs-fixer.useConfig": true,
+    "simple-php-cs-fixer.config": ".php-cs-fixer.dist.php",
+    "simple-php-cs-fixer.save": true,
+    "simple-php-cs-fixer.usingCache": false
 }
 ```
 

@@ -1,5 +1,7 @@
 <?php
 
+require 'vendor/autoload.php';
+
 use MementoHub\CodingStandards\ConfigFactory;
 use PhpCsFixer\Finder;
 
