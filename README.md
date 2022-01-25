@@ -20,8 +20,10 @@ chmod +x .git/hooks/pre-commit
 grep -qxF '/.php-cs-fixer.cache' .gitignore || echo '/.php-cs-fixer.cache' >> .gitignore
 
 # run a global fix on your project and commit the changes
-vendor/bin/php-cs-fixer fix
-git commit -a -m "Fixed code styling"
+# it has to run twice for some rules to take effect
+vendor/bin/php-cs-fixer fix --using-cache=no
+vendor/bin/php-cs-fixer fix --using-cache=no
+git add . && git commit -m "Fixed code styling"
 ```
 
 ## VS Code configuration
